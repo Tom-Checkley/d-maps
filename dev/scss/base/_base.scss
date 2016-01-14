@@ -1,0 +1,72 @@
+// ================================
+//  Global config
+// ================================
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: $black;
+	color: white;
+	overflow-x: hidden;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: $base__font-size;
+	line-height: $base__line-h;
+}
+
+main {
+	@extend %clearfix;
+	padding-top: 5%;
+	padding-bottom: calc(5% + 48px);
+	@include mq(medium) {
+		padding-top: 2.5%;
+		padding-bottom: calc(2.5% + 68px);
+	}
+}
+
+aside {
+	background-color: rgba($white, 0.8);
+	color: $black;
+	border-radius: 8px;
+	padding: 5%;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Forum', cursive;
+}
+
+p {
+	// font-size: em(16px);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-size: $base__font-size;
+}
+
+img {
+	width: 100%;
+}
+button {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+[class^="lsf"] {
+	font-family: 'LigatureSymbols';
+}
+

@@ -1,0 +1,8 @@
+.underlay {
+	margin: auto;
+	position: fixed;
+	background-image: radial-gradient(rgba($black, 0.8), rgba($black, 1) 70%),
+										url(../img/full/logo.jpg);
+	background-size: cover;
+	z-index: 0;
+}

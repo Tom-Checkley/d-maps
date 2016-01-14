@@ -1,0 +1,12 @@
+.port {
+	height: calc(70% - 48px);
+	width: auto;
+	@include mq(large) {
+		height: calc(90% - 48px);
+	}
+}
+
+.land {
+	width: 100%;
+	height: auto;
+}

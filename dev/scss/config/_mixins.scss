@@ -1,0 +1,93 @@
+// ============================================================================
+// MIXINS
+// ============================================================================
+
+// BEM Selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+
+@mixin doubler($margin: 1em) {
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+}
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $breakpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }@else if $break == "x-large" {
+    @media (min-width: $breakpoint-x-lg) {
+      @content;
+    }
+  }
+   @else {
+   	@error "No value could be retrieved for `#{$break}`. "
+  }
+}
+
+
+// Border
+
+@mixin add-border($position: map-get($add-border, position),
+  $size: map-get($add-border, size),
+  $style: map-get($add-border, style),
+  $color: map-get($add-border, color),
+  $radius: map-get($add-border, radius)) {
+
+  @if $position == all {
+    border: $size $style $color;
+    border-radius: $radius;
+  } @else {
+    border-#{$position}: $size $style $color;
+    border-radius: $radius;
+  }
+}
+
+// keyframes
+@mixin keyframes ($animation-name) {
+  @-webkit-keyframes $animation-name{
+      @content;
+  }
+  @-moz-keyframes $animation-name{
+      @content;
+  }
+  @-ms-keyframes $animation-name{
+      @content;
+  }
+  @-o-keyframes $animation-name{
+      @content;
+  }
+  @keyframes $animation-name{
+      @content;
+  }
+}
+
+
+

@@ -1,0 +1,22 @@
+%inputs {
+	outline: none;
+	border: none;
+	padding: em(4px) em(12px);
+	border-radius: 5px;
+	background-color: $white;
+	display: block;
+	width: 100%;
+	color: $black;
+}
+
+%flex-spc-bet {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+%flex-justify-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

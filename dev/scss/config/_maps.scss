@@ -1,0 +1,9 @@
+// map for default add-border mixin settings
+
+$add-border: (
+  position: all,
+  size: 1px,
+  style: solid,
+  color: #000,
+  radius: null
+) !default;

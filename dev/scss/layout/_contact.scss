@@ -1,0 +1,92 @@
+.contact {
+	.row {
+		@include mq(x-large) {
+			@include m(fixed-height) {
+				[class*="col"] {
+					margin-top: 0;
+					height: 350px;
+					position: relative;
+				}
+			}
+		}
+	}
+	form {
+		font-size: $base__font-size;
+		@include mq(x-large) {
+			position: relative;
+			height: 100%;
+		}
+		[type="submit"] {
+			margin-top: em(12px);
+			@include mq(x-large) {
+				margin-bottom: 0;
+				position: absolute;
+				bottom: 0;
+			}
+			&:hover {
+				background-color: darken($white, 20%);
+				font-weight: bold;
+			}
+		}
+		// @include mq(x-large) {
+		// 	margin-bottom: 0;
+		// }
+	}
+
+	#map_canvas {
+		width: 600px;
+		max-width: 100%;
+		height: 350px;
+	}
+
+	input {
+		@extend %inputs;
+	}
+
+	textarea {
+		@extend %inputs;
+		height: em(100px);
+	}
+	img {
+		border-radius: 5px;
+	}
+	ul {
+		list-style: none;
+		margin-top: em(20px);
+		li {
+			margin: em(8px) 0;
+			a {
+				@include add-border($color: $white, $radius: 5px);
+				padding: em(4px) em(8px);
+				// text-align: center;
+				display: block;
+			}
+		}
+	}
+	button {
+		span {
+			font-family: 'LigtureSymbols';
+			color: $black;
+			font-size: em(24px);
+		}
+	}
+	
+	// .buttons {
+	// 	@include mq(x-large) {
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 	}
+	// 	li {
+	// 		&:last-of-type {
+	// 			@include mq(x-large) {
+	// 				margin-bottom: 0;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+}
+
+
+
+

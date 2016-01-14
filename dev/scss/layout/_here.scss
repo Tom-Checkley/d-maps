@@ -1,0 +1,14 @@
+.here {
+	.right {
+		display: static;
+		float: right;
+		width: 40%;
+		margin: 0 0 5% 5%;
+		img {
+			display: block;
+			&:first-child {
+				margin-bottom: em(12px);
+			}
+		}
+	}
+}

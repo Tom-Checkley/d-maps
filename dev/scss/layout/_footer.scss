@@ -1,0 +1,28 @@
+footer {
+	@include add-border($position: top, $color: $white, $radius: 0);
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: em(68px);
+	padding: em(6px);
+	background-color: rgba($black, 0.8);
+	display: block;
+	z-index: 200;
+	.footer__contact {
+		font-size: em(16px);
+		text-align: center;
+		margin-bottom: em(8px);
+		a {
+			margin: em(8px);
+		}
+	}
+	.footer__author {
+		padding: em(4px);
+		text-align: center;
+		line-height: $base__line-h / 1.5;
+		padding-bottom: em(4px);
+		a {
+			font-size: em(12px);
+		}
+	}
+}

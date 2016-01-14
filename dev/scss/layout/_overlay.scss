@@ -1,0 +1,86 @@
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black, 0.8);
+	z-index: 200;
+	.close {
+		font-size: em(24px);
+		padding: em(12px);
+		float: right;
+	}
+	.holder {
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 48px;
+		@include m(fixed-height) {
+			height: calc(100% - 48px);
+			.flexbox & {
+				@extend %flex-justify-center;
+			}
+		}
+		.flexbox & {
+			@extend %flex-justify-center;
+		}
+		@include mq(medium) {
+			width: 70%;
+			margin-left: 15%;
+		}
+		@include mq(large) {
+			width: 50%;
+			margin-left: 25%;
+		}
+		img {
+			.flexbox & {
+				align-self: center;
+			}
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p {
+			text-align: center;
+		}
+		.spinner {
+			font-family: 'icomoon';
+			font-size: 48px;
+			position: absolute;
+			top: calc(50% - 24px);
+			left: calc(50% - 24px);
+			@include keyframes('spinning') {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			animation: spinning 3s linear infinite;
+		}
+		aside {
+			.flexbox & {
+				align-self: center;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			background-color: $white;
+			font-size: em(16px);
+			line-height: em(22px, 16px);
+			@include mq(medium) {
+				font-size: em(20px);
+				line-height: em(26px, 20px);
+			}
+			h2 {
+				margin: .3em 0 .3em 0;
+				@include mq(medium) {
+					margin: .5em 0 .5em 0;
+				}
+			}
+			ul {
+				list-style: square;
+				list-style-position: inside;
+			}
+		}
+	}
+}

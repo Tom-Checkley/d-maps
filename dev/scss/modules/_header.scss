@@ -1,0 +1,21 @@
+.header {
+	padding: em(5px);
+	hgroup {
+		@extend %clearfix;
+		// background-color: $black;
+		& > * {
+			display: inline-block;
+			float: left;
+		}
+		h1 {
+			font-size: em(40px);
+			margin: em(8px);
+		}
+	}
+	@include e(logo) {
+		width: em(60px);
+		img {
+			border-radius: 8px;
+		}
+	}
+}
